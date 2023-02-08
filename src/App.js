@@ -1,19 +1,30 @@
 
 import './App.css';
-import  NavBar  from './components/NavBar';
-import NavBarHome from './components/NavBarHome';
-import Abc from './components/Hello';
+import NavBar from './components/NavBAr';
+import {Routes , Route} from 'react-router-dom';
+import AboutUs from './Pages/AboutUs';
+import Home from './Pages/Home';
+import ContactUs from './Pages/ContactUs';
+import OurServing from './Pages/OurServing';
+
 
 
 function App() {
   return (
-  <div>
-  <h1 className='abc'>This is heading</h1>
+  <>
   <NavBar />
-  <NavBarHome />
   
   
-  </div>
+  <Routes>
+  <Route  path='/' element={<Home />}></Route>
+  <Route  path='/AboutUs' element={<AboutUs />}></Route>
+  <Route  path='/ContactUs' element={<ContactUs />}></Route>
+  <Route  path='/OurServing' element={<OurServing />}></Route>
+  </Routes>
+  
+  
+  
+  </>
  
 
     
